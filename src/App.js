@@ -14,7 +14,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch("https://swapi.dev/api/films/");
+      const response = await fetch("https://react-http-c708b-default-rtdb.firebaseio.com/movies.json");
       if (!response.ok) {
         throw new Error("Something went wrong here");
       }
@@ -34,7 +34,7 @@ function App() {
     }
     setIsLoading(false);
   },[]);
-  
+
   useEffect(()=>{
     fetchMovieHandler();
   }, [fetchMovieHandler]) //define when the effect will run
