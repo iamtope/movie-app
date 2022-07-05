@@ -16,7 +16,7 @@ function App() {
     try {
       const response = await fetch("https://react-http-c708b-default-rtdb.firebaseio.com/movies.json");
       if (!response.ok) {
-        throw new Error("Something went wrong here");
+        throw new Error("Something went wrong here ");
       }
       const data = await response.json();
       const transformedMovies = data.results.map((movieData) => {
